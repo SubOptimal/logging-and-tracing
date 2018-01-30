@@ -44,6 +44,7 @@ mvn -am -pl 40_sleuth spring-boot:run
 The last example runs two services on different ports in two different processes.
 Therefore two commands are necessary to be run in different terminals:
 ----
+docker run -d -p 9411:9411 openzipkin/zipkin
 mvn -am -pl 50_zipkin spring-boot:run
 mvn -am -pl 50_zipkin spring-boot:run@run-external
 ----
